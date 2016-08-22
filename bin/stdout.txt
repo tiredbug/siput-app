@@ -1,0 +1,100 @@
+Buildfile: build.xml
+
+-set-mode-check:
+
+-set-debug-files:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 23.0.2
+ [checkenv] Installed at C:\android-sdk-windows
+
+-setup:
+     [echo] Project Name: SIPUT
+  [gettype] Project Type: Application
+
+-set-debug-mode:
+
+-debug-obfuscation-check:
+
+-pre-build:
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 20.0.0
+     [echo] Resolving Build Target for SIPUT...
+[gettarget] Project Target:   Android 4.4W
+[gettarget] API level:        20
+     [echo] ----------
+     [echo] Creating output directories if needed...
+     [echo] ----------
+     [echo] Resolving Dependencies for SIPUT...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+     [echo] ----------
+     [echo] Building Libraries with 'debug'...
+   [subant] No sub-builds to iterate on
+
+-code-gen:
+[mergemanifest] Found Deleted Target File
+[mergemanifest] Merging AndroidManifest files into one.
+[mergemanifest] Manifest merger disabled. Using project manifest only.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] Found Deleted Target File
+     [aapt] Generating resource IDs...
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] No need to generate new BuildConfig.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 2 source files to bin\classes
+    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] 3 warnings
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+      [dex] input: bin\classes
+      [dex] Found Deleted Target File
+      [dex] Converting compiled files and external libraries into bin\classes.dex...
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: res
+   [crunch] To destination dir: bin\res
+   [crunch] Crunched 0 PNG files to update cache
+
+-package-resources:
+     [aapt] Found Deleted Target File
+     [aapt] Creating full resource package...
+
+-package:
+[apkbuilder] Found Deleted Target File
+[apkbuilder] Creating SIPUT-debug-unaligned.apk and signing it with a debug key...
+
+-post-package:
+
+-do-debug:
+ [zipalign] Running zip align on final apk...
+     [echo] Debug Package: bin\SIPUT-debug.apk
+[propertyfile] Updating property file: bin\build.prop
+[propertyfile] Updating property file: bin\build.prop
+[propertyfile] Updating property file: bin\build.prop
+[propertyfile] Updating property file: bin\build.prop
+
+-post-build:
+
+debug:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
